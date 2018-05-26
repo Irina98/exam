@@ -1,0 +1,82 @@
+.works {
+  background: $bg;
+  background: url('../images/bg-works.jpg');
+  background-size: cover;
+  padding: 50px 0 60px;
+  .container {
+    @include container;
+    @include flex;
+    flex-flow: column;
+  }
+  &__logo {
+    margin: 0 auto;
+  }
+  &__caption {
+    margin: 35px auto 60px;
+    @include text("ProximaNova", 36px, $color: $def-color, $text-transform: uppercase);
+  }
+  .worksSlider {
+    position: relative;
+    &__slide {
+      margin-bottom: 45px;
+      &_img {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+    }
+  }
+
+  .slick-prev:before {
+    content: url("../images/work-arrow-left.svg");
+  }
+  .slick-next:before {
+    content: url("../images/work-arrow-right.svg");
+  }
+
+  .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+  .slick-dots li button:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    opacity: 1;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: background .3s;
+  }
+  .slick-dots li button:hover,
+  .slick-dots li.slick-active button {
+    background: #fff;
+  }
+  .slick-dots li button:hover:before,
+  .slick-dots li.slick-active button:before {
+    background: #fff;
+  }
+
+  &__link {
+    border: 1px solid $def-color;
+    display: inline-block;
+    width: 193px;
+    height: 48px;
+    margin: 50px auto 0;
+    text-align: center;
+    padding-top: 12px;
+    @include text('PTSans', 20px, $color: $def-color);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    //&:hover,
+    //&:focus{
+    //  background: #fff;
+    //  color: $text_color;
+    //  transition-duration: 2s;
+    //}
+  }
+}

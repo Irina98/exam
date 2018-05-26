@@ -1,0 +1,65 @@
+.team{
+  padding: 50px 0 100px 0;
+  .container{
+    @include container;
+    @include flex;
+    flex-flow: column;
+  }
+  &__logo{
+    width: 50px;
+    margin: 0 auto;
+  }
+  &__caption{
+    text-align: center;
+    @include text('ProximaNova', 36px, $color: $text_color, $text-transform: uppercase);
+    margin: 35px 0 80px 0;
+  }
+
+    .teamSlider{
+      height: 484px;
+      &__slide{
+        height: 484px;
+          background: #fff;
+          position: relative;
+          top: 129px;
+          border-radius: 5px;
+          &_img{
+            display: block;
+          margin: 0 auto;
+          width: 260px;
+          height: 258px;
+          position: relative;
+          top: -129px;
+        }
+        &_name, &_prof{
+          position: absolute;
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        &_name{
+          top: 160px;
+          @include text('ProximaNova', 24px, $color: #9f9acf, $text-transform: uppercase);
+        }
+        &_prof{
+          top: 210px;
+          @include text('PTSans', 24px, $color: $text_color);
+        }
+        &_communication{
+          background: #9f9acf;
+          @include flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          padding: 20px 45px 20px 45px;
+          margin-top: 25px;
+          border-radius: 0 0 5px 5px;
+        }
+      }
+      .slick-prev:before {
+        content: url("../images/team-arrow-left.svg");
+      }
+      .slick-next:before {
+        content: url("../images/team-arrow-right.svg");
+      }
+    }
+}

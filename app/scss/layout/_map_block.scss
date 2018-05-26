@@ -1,0 +1,62 @@
+.map {
+  position: relative;
+  #map {
+    background: gray;
+    width: 100%;
+    height: 900px;
+  }
+  .container {
+    @include container;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -430px;
+    width: 860px;
+    text-align: center;
+  }
+  &__logo {
+    display: block;
+    margin: 50px auto 30px;
+  }
+  &__caption {
+    @include text('ProximaNova', 36px, $color: $def-color, $text-transform: uppercase);
+  }
+  .map__form {
+    width: 860px;
+    @include flex;
+    flex-flow: row wrap;
+    &_input {
+      margin-top: 270px;
+      flex: 1;
+      margin-bottom: 30px;
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+    &_message {
+      flex: 0 1 100%;
+    }
+    .form {
+      padding: 19px;
+      border: 0;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, .2);
+      @include text('PTSans', 18px, italic, $line-height: 1, $color: $def-color);
+      @include placeholder;
+      &__button {
+        display: block;
+        background: #9f9acf;
+        margin: 55px auto;
+        border: 0;
+        border-bottom: 5px solid #8783b0;
+        border-radius: 5px;
+        padding: 20px 65px;
+        @include text('ProximaNova', 15px, $line-height: 1.3, $color: $def-color);
+        position: relative;
+        top: 0;
+        transition: .2s;
+        cursor: pointer;
+      }
+    }
+  }
+}

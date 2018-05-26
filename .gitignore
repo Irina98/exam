@@ -1,0 +1,12 @@
+# ignor all txt
+*.txt
+
+# ignor psd
+app/images/*.psd
+app/images/creativesolutions-assets
+
+# ignor node_modules
+node_modules/
+
+# ignore .idea
+.idea/

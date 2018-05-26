@@ -1,0 +1,23 @@
+.footer{
+  background: #9f9acf;
+  .container{
+    @include container;
+    @include flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 80px 0;
+  }
+  &__copyrights{
+    margin-right: auto;
+    @include text('PTSans', 18px, $color: $def-color);
+  }
+  &__nets{
+    .nets{
+      list-style: none;
+      &__listItem{
+        display: inline-block;
+        padding-right: 25px;
+      }
+    }
+  }
+}

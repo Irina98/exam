@@ -1,0 +1,58 @@
+.about{
+  padding: 125px 0 120px 0;
+  .container{
+    @include container;
+    @include flex;
+    flex-flow: row nowrap;
+  }
+  &__titleBlock{
+    background: url('../images/bg-aboutUs.jpg') no-repeat;
+    background-size: 100%;
+    flex: 0 1 380px;
+    &_logo{
+      display: block;
+      margin: 0 auto;
+      margin-top: 75px;
+      width: 50px;
+      height: 55px;
+    }
+    &_text{
+      height: 555px;
+      margin-top: 45px;
+      text-align: center;
+      @include text('ProximaNova', 35px, $weight: bold, $color: $def-color, $text-transform: uppercase);
+    }
+  }
+  &__info{
+    flex: 1;
+    padding-top: 75px;
+    &_text{
+      padding: 0px 30px 0 125px;
+      @include text('PTSans', 20px, $color: $text-gray);
+    }
+    &_text2{
+      padding-bottom: 70px;
+    }
+    &_button{
+      display: block;
+      background: $bg;
+      margin: 85px auto 100px;
+      width: 195px;
+      height: 50px;
+      border: 2px solid #655f60;
+      @include text('PTSans', 20px, $color: $text-gray);
+      text-align: center;
+      line-height: 50px;
+      @include link;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      //&:hover,
+      //&:focus{
+      //  background: #655f60;
+      //  color: white;
+      //  transition-duration: 2s;
+      //}
+    }
+  }
+}

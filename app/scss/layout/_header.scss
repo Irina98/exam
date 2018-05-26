@@ -1,0 +1,72 @@
+//делаем фиксированое меню
+.menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 36px 0 15px 0;
+  z-index: 999;
+  transition-duration: 1s;
+  &:hover{
+    background: rgba(0, 0, 0, .4);
+  }
+  .container{
+    @include container;
+    @include flex;
+    align-items: center;
+  }
+  //максимальный отступ от лого дл нава
+  &__logo{
+    margin-right: auto;
+    //лого
+    &_img{
+      width: 53px;
+      height: 73px;
+    }
+  }
+}
+
+//навигация
+.nav{
+  //поля слева у всех кроме 1 элемента списка
+    &__listItem:not(:first-child){
+      margin-left: 30px;
+    }
+  //делаем списки меню строчными
+    &__listItem{
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 5px;
+      //применяем миксин о стилями для текста
+      &_link{
+        @include text('ProximaNova', 24px, $weight: bold, $color: $def-color, $text-transform: uppercase);
+      }
+    }
+  }
+
+//стили для текста первого блока
+.intro{
+  //фон
+  background: url('../images/bg-header.jpg') no-repeat ;
+  background-size: cover;
+  //задание ширины контейнера
+  .container{
+    @include container;
+    padding: 322px 0 422px;
+  }
+  //общие стили для обзаца
+  .par{
+    margin: 0 auto;
+    text-align: center;
+  }
+  //первый абзац
+  &_firstP{
+    @include text('ProximaNova', 72px, $weight: bold, $color: $def-color, $text-transform: uppercase)
+  }
+  //второй абзац
+  &_secondP{
+    width: 665px;
+    @include text('PTSans', 30px, $style: italic, $color: $def-color);
+  }
+}

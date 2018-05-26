@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/PTSansRegular.woff2') format('woff2'),
+  url('../fonts/PTSansRegular.woff') format('woff'),
+  url('../fonts/PTSansRegular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/PTSansItalic.woff2') format('woff2'),
+  url('../fonts/PTSansItalic.woff') format('woff'),
+  url('../fonts/PTSansItalic.ttf') format('ttf');;
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/PTSansBold.woff2') format('woff2'),
+  url('../fonts/PTSansBold.woff') format('woff'),
+  url('../fonts/PTSansBold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSans';
+  src: url('../fonts/PTSansBoldItalic.woff2') format('woff2'),
+  url('../fonts/PTSansBoldItalic.woff') format('woff'),
+  url('../fonts/PTSansBoldItalic.ttf') format('ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  src: url('../fonts/ProximaNovaSemibold.woff2') format('woff2'),
+       url('../fonts/ProximaNovaSemibold.woff') format('woff'),
+       url('../fonts/ProximaNovaSemibold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNovaBold.woff2') format('woff2'),
+       url('../fonts/ProximaNovaBold.woff') format('woff'),
+       url('../fonts/ProximaNovaBold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}

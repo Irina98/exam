@@ -1,0 +1,67 @@
+.services{
+  .container{
+    //@include container;
+    width: 1170px;
+    margin: 0 auto;
+    @include flex;
+    flex-flow: row wrap;
+  }
+
+  .text{
+    width: 220px;
+    text-align: center;
+  }
+
+  &__blocks{
+    width: 760px;
+    //background: red;
+    @include flex;
+    flex-flow: row wrap;
+    &_otdel{
+      //background: green;
+      flex: 0 1 380px;
+      height: 400px;
+      @include flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_otdel:nth-child(3n+1){
+      background: #dbdbdb;
+    }
+    &_img{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__caption{
+    @include text('PTSans', 24px, $color: $text_color, $text-transform: uppercase);
+    margin-bottom: 15px;
+  }
+  &__info{
+    @include text('PTSans', 18px, $color: $text_color);
+  }
+
+  &__title{
+    background: $bg;
+    background: url('../images/bg-services.jpg') no-repeat;
+    flex: 0 1 410px;
+    @include flex;
+    flex-flow: column;
+    align-items: center;
+    order: 2;
+    &_img{
+      padding-top: 116px;
+      margin-bottom: 35px;
+    }
+    &_caption{
+      @include text('ProximaNovaSemibold', 36px, $color: $def-color, $text-transform: uppercase);
+      margin-bottom: 110px;
+    }
+    &_info{
+      @include text('PTSans', 18px, $color: $def-color);
+      padding: 0 30px;
+      text-align: center;
+    }
+  }
+}

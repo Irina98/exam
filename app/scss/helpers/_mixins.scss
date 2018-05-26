@@ -1,0 +1,39 @@
+@mixin container{
+  width: 1110px;
+  margin: 0 auto;
+}
+
+@mixin flex{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin link{
+  text-decoration: none;
+}
+
+@mixin text($font, $size, $style: null, $weight: null, $line-height: 1.2, $color: null, $text-transform: null){
+  font-family: $font;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $line-height;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+
+@mixin placeholder{
+  &::-webkit-input-placeholder
+  //&:-ms-input-placeholder,
+  //&:-moz-placeholder,
+  //&::-moz-placeholder
+  {
+    @include text('PTSans', 18px, italic, $line-height: 1, $color: $def-color);
+  }
+}
+//montserrat

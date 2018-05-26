@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: $bg;
+  //height: 1000px;
+}
+
+.link{
+  @include link;
+}
+
+.slick-slide{
+  margin: 0 15px;
+}
+
+.slick-prev:before{
+  visibility: visible;
+}
+.slick-next:before{
+  visibility: visible;
+}
